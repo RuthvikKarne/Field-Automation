@@ -1,61 +1,233 @@
-<div style="font-family: sans-serif; line-height: 1.6; color: #333;">
-    <h1 align="center">Field Automation App</h1>
-    <p align="center">
-        <i>A comprehensive MERN stack solution for efficient field task management and monitoring.</i>
-    </p>
+# 🌱 Field Automation
 
-    <hr>
+A full-stack workforce management platform built with the MERN stack to streamline field operations, task assignment, and real-time progress tracking.
 
-    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnifying%20Glass%20Tilted%20Right.png" width="30" align="top"> Project Overview (STAR Method)</h3>
-    
-    <ul>
-        <li><b>Situation:</b> Organizations managing field workers often struggle with tracking task progress, maintaining real-time visibility, and ensuring effective communication. Manual tracking processes lead to inefficiencies, miscommunication, and delayed operations.</li>
-        <li><b>Task:</b> The objective was to develop a centralized Field Automation platform that enables managers to effortlessly assign and monitor tasks while providing field workers with a straightforward interface to access schedules and report progress in real-time.</li>
-        <li><b>Action:</b> I engineered a robust MERN stack application featuring role-based access control (RBAC). The backend, powered by Node.js, Express, and MongoDB, handles secure data operations and JWT authentication. The frontend, built with React and Vite, offers an interactive dashboard providing managers with real-time statistical insights, task filtering capabilities, and streamlined task assignment features.</li>
-        <li><b>Result:</b> The resulting application is a scalable, responsive, and secure platform that significantly enhances operational efficiency. It provides transparent, real-time visibility into field activities, improves accountability, and optimizes the overall workflow for both managers and field staff.</li>
-    </ul>
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-    <hr>
+---
 
-    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Wrench.png" width="30" align="top"> Technologies Used</h3>
-    <ul>
-        <li><b>Frontend:</b> React, Vite, React Router, CSS</li>
-        <li><b>Backend:</b> Node.js, Express.js</li>
-        <li><b>Database:</b> MongoDB, Mongoose</li>
-        <li><b>Authentication:</b> JWT (JSON Web Tokens), bcryptjs</li>
-        <li><b>Other Tools:</b> Axios, CORS, dotenv</li>
-    </ul>
+## 📖 Overview
 
-    <hr>
+Field Automation is a workforce management application designed to help organizations efficiently manage field employees and operational tasks. The platform provides managers with centralized control over task assignments while enabling field workers to receive updates, track progress, and report task completion in real time.
 
-    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" width="30" align="top"> Getting Started</h3>
-    
-    <p>Follow these steps to run the application locally:</p>
+The application features secure authentication, role-based access control, task monitoring, and performance dashboards, making it suitable for organizations managing distributed teams and field operations.
 
-    <b>1. Clone the repository:</b>
-    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;"><code>git clone &lt;repository_url&gt;
-cd Field-Automation</code></pre>
+---
 
-    <b>2. Setup Backend:</b>
-    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;"><code>cd server
+## ✨ Features
+
+### 🔐 Authentication & Security
+- Secure Login & Registration
+- JWT-based Authentication
+- Password Encryption using bcrypt
+- Protected Routes & APIs
+- Role-Based Access Control (RBAC)
+
+### 📋 Task Management
+- Create, Assign, and Manage Tasks
+- Task Priority Management
+- Status Tracking (Pending, In Progress, Completed)
+- Due Date Management
+- Real-Time Task Updates
+
+### 📊 Dashboard & Analytics
+- Task Statistics Overview
+- Completed vs Pending Tasks
+- Employee Performance Tracking
+- Task Filtering & Search
+- Operational Insights Dashboard
+
+### 👥 User Management
+- Manager Dashboard
+- Worker Dashboard
+- User Profile Management
+- Access Control by Roles
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Manager Dashboard
+        │
+        ▼
+React Frontend (Vite)
+        │
+ REST API (Axios)
+        │
+        ▼
+Node.js + Express Backend
+        │
+        ▼
+MongoDB Database
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- Vite
+- React Router
+- Axios
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+- JWT Authentication
+- bcryptjs
+- dotenv
+
+### Database
+- MongoDB
+- Mongoose
+
+---
+
+## 📂 Project Structure
+
+```text
+Field-Automation/
+│
+├── server/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   └── server.js
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── context/
+│   ├── services/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public/
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/Field-Automation.git
+cd Field-Automation
+```
+
+### 2. Install Frontend Dependencies
+
+```bash
 npm install
-# Create a .env file and add necessary environment variables (e.g., MONGO_URI, JWT_SECRET)
-npm start</code></pre>
+```
 
-    <b>3. Setup Frontend:</b>
-    <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 5px;"><code>cd ../
+### 3. Install Backend Dependencies
+
+```bash
+cd server
 npm install
-npm run dev</code></pre>
+```
 
-    <hr>
+### 4. Configure Environment Variables
 
-    <h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/File%20Folder.png" width="30" align="top"> Key Features</h3>
-    <ul>
-        <li><b>Role-Based Dashboards:</b> Distinct views and capabilities for Managers and Workers.</li>
-        <li><b>Real-Time Task Management:</b> Create, update status, and track tasks with ease.</li>
-        <li><b>Statistical Insights:</b> Visual summaries of total, completed, pending, and overdue tasks.</li>
-        <li><b>Advanced Filtering:</b> Filter tasks by priority and status for better organization.</li>
-        <li><b>Secure Authentication:</b> Robust user authentication and authorization using JWT.</li>
-    </ul>
+Create a `.env` file inside the `server` folder:
 
-</div>
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## ▶️ Running the Application
+
+### Start Backend
+
+```bash
+cd server
+npm start
+```
+
+### Start Frontend
+
+```bash
+npm run dev
+```
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+Backend:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## 🎯 Use Cases
+
+- Field Workforce Management
+- Service Operations Tracking
+- Maintenance Teams
+- Logistics & Delivery Operations
+- Construction Site Monitoring
+- Sales Team Activity Tracking
+
+---
+
+## 🔑 Key Benefits
+
+- Centralized Task Management
+- Improved Team Coordination
+- Real-Time Progress Visibility
+- Enhanced Accountability
+- Secure User Authentication
+- Scalable MERN Architecture
+- Responsive User Experience
+
+---
+
+## 📈 Future Enhancements
+
+- Real-Time Notifications
+- GPS Location Tracking
+- Attendance Management
+- Mobile Application
+- File & Image Uploads
+- Reports & Analytics Export
+- WebSocket-Based Live Updates
+- AI-Based Task Prioritization
+
+---
+
+## 👨‍💻 Author
+
+**Karne Ruthvik**
+
+Full Stack Developer | MERN Stack Developer
+
+GitHub: https://github.com/RuthvikKarne
+
+---
+
+## 📄 License
+
+This project is developed for educational and portfolio purposes.
